@@ -1,0 +1,39 @@
+= Book Summary Action Tracker App Requirements
+:toc: right
+:toclevels:5
+:sectnums:
+
+I want to write down detailed required for building an application. The application must do the following.
+
+* The app stores detailed summary of the book that I have read in database.
+
+* The app should have option to also store chapter summary.
+
+* The app should be able to convert the summary of the book and chapter into actionalble items
+
+* The actionable items can be priorities and have date deadline
+
+* I should be able to give multiple comments on the actionable items, and the comments should have date. I should also be able to mark the comment as resolved.
+
+* The app should give me reminders of actionable items based on certain criteria, like weight and importance.
+
+* The app should also give track how often a particular actionable item is used and completed.
+
+* The book should have categories and tags.
+
+* The app should have a dashboard to show the actionable items and their status.
+
+* The apps should give option to export the summary and actionable items to PDF or CSV.
+
+* The app should have option to search based on categories and tags, weight and importance and author
+
+* The app should have option to search based on date and time.
+
+* The app should have option to search based on book name, authore name.
+
+* The app should allow search inside the summary and actionable items.
+
+* The app should have option to add notes and comments on the summary and actionable items.
+
+
+
