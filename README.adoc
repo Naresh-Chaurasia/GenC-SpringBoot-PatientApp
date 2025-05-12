@@ -1,39 +1,74 @@
-= Book Summary Action Tracker App Requirements
+= GenC Spring Boot Patient Application
 :toc: right
-:toclevels:5
-:sectnums:
+:toclevels: 5
+:sectnums: 5
 
-I want to write down detailed required for building an application. The application must do the following.
+== Overview
+The **GenC Spring Boot Patient Application** is a RESTful web application built using Spring Boot. It allows managing patient information and their associated clinical data. The application uses an H2 in-memory database for development and testing purposes.
 
-* The app stores detailed summary of the book that I have read in database.
+== Features
+- Manage patient records (CRUD operations).
+- Manage clinical data associated with patients.
+- RESTful APIs for integration with other systems.
+- In-memory H2 database for quick setup and testing.
+- Global exception handling for consistent error responses.
 
-* The app should have option to also store chapter summary.
+== Tech Stack
+- **Backend**: Spring Boot, Spring Data JPA
+- **Database**: H2 (in-memory)
+- **Build Tool**: Maven
+- **Testing**: JUnit 5, MockMvc
+- **API Documentation**: Swagger/OpenAPI (optional)
 
-* The app should be able to convert the summary of the book and chapter into actionalble items
+== Prerequisites
+- Java 17 or higher
+- Maven 3.8 or higher
+- An IDE like IntelliJ IDEA or VS Code
 
-* The actionable items can be priorities and have date deadline
+== Getting Started
 
-* I should be able to give multiple comments on the actionable items, and the comments should have date. I should also be able to mark the comment as resolved.
+=== Clone the Repository
+```bash
+git clone <repository-url>
+cd GenC-SpringBoot-PatientApp
+```
 
-* The app should give me reminders of actionable items based on certain criteria, like weight and importance.
+== API Endpoints
 
-* The app should also give track how often a particular actionable item is used and completed.
+=== Patient Endpoints
 
-* The book should have categories and tags.
+* GET /api/patients: Retrieve all patients.
+* GET /api/patients/{id}: Retrieve a patient by ID.
+* POST /api/patients: Create a new patient.
+* PUT /api/patients/{id}: Update an existing patient.
+* DELETE /api/patients/{id}: Delete a patient by ID.
 
-* The app should have a dashboard to show the actionable items and their status.
+=== Clinical Data Endpoints
 
-* The apps should give option to export the summary and actionable items to PDF or CSV.
-
-* The app should have option to search based on categories and tags, weight and importance and author
-
-* The app should have option to search based on date and time.
-
-* The app should have option to search based on book name, authore name.
-
-* The app should allow search inside the summary and actionable items.
-
-* The app should have option to add notes and comments on the summary and actionable items.
+* GET /api/clinical: Retrieve all clinical data.
+* GET /api/clinical/{id}: Retrieve clinical data by ID.
+* POST /api/clinical: Create new clinical data.
+* PUT /api/clinical/{id}: Update clinical data by ID.
+* DELETE /api/clinical/{id}: Delete clinical data by ID.
 
 
+== Project Structure
 
+----
+src/
+├── main/
+│   ├── java/com/bt/
+│   │   ├── Patient.java          # Patient entity
+│   │   ├── ClinicalData.java     # ClinicalData entity
+│   │   ├── PatientController.java # REST controller for patients
+│   │   ├── ClinicalDataController.java # REST controller for clinical data
+│   │   ├── PatientRepository.java # Repository for patients
+│   │   ├── ClinicalDataRepository.java # Repository for clinical data
+│   ├── resources/
+│       ├── application.properties # Application configuration
+│       ├── data.sql*    # Preloaded sample data
+├── test/
+│   ├── java/com/bt/
+│   │   ├── PatientControllerTest.java # Unit tests for PatientController
+│   │   ├── ClinicalDataControllerTest.java # Unit tests for ClinicalDataController
+----
